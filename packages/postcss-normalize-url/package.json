@@ -8,9 +8,7 @@
     "LICENSE-MIT"
   ],
   "scripts": {
-    "prebuild": "del-cli dist",
-    "build": "cross-env BABEL_ENV=publish babel src --config-file ../../babel.config.js --out-dir dist --ignore \"**/__tests__/\"",
-    "prepublish": "yarn build"
+    "prepublish": "cross-env BABEL_ENV=publish babel src --config-file ../../babel.config.js --out-dir dist --ignore '**/__tests__/'"
   },
   "keywords": [
     "css",
@@ -27,6 +25,11 @@
     "normalize-url": "^3.3.0",
     "postcss": "^7.0.16",
     "postcss-value-parser": "^3.3.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "cross-env": "^5.2.0"
   },
   "homepage": "https://github.com/cssnano/cssnano",
   "author": {
